@@ -127,6 +127,10 @@ footer {
     background-color: #555;
 }
 
+.products {
+    text-align: center;
+}
+
 /* Product grid scroll container */
 .product-grid-scroll {
     overflow-x: auto; /* Enable horizontal scrolling */
@@ -136,15 +140,26 @@ footer {
 
 /* Product grid styles */
 .product-grid {
-    display: inline-block; /* Display products in a row */
+    width: 100%;
+    display: inline-flex; /* Display products in a row */
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 
 /* Product card styles */
 .product-card {
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px lightgray;
     display: inline-block;
-    width: 200px;
-    margin-right: 20px;
-    vertical-align: top;
+    text-align: center;
+    margin: 20px;
+    width: max-content;
+    padding: 5px;
+}
+
+.product-card button {
+    margin: 5px;
 }
 
 .product-card img {
