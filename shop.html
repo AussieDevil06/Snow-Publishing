@@ -74,7 +74,14 @@
     
     <footer>
         <!-- Footer content, links, etc. -->
-        <p>&copy; 2024 Snow Publishing. All rights reserved.</p>
+			<p>
+				&copy;
+				<script>
+                    // Automate year - This will update each year automatically
+					document.writeln(new Date().getFullYear());
+				</script>
+				Snow Publishing. All rights reserved.
+			</p>
     </footer>
   
   <!-- Cart Modal -->
