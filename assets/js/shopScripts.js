@@ -1,29 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
-	// TODO: Render book products like done below for the merch products
-	//     * -[ ] Define a list of book products in the product list JSON file
-	//     * -[ ] Get access to the book product grid
-	//     * -[ ] Create card elements for each of the book products
+const MERCH_PRODUCT_GROUP = { Name: "merch", Grid: "merch-product-grid" };
+const BOOK_PRODUCT_GROUP = { Name: "book", Grid: "book-product-grid" };
+const PRODUCT_SOURCE_FILE = "./assets/product_list.json";
 
-	renderMerchProducts();
+document.addEventListener("DOMContentLoaded", () => {
+	// Render book products to the page
+	renderProducts(PRODUCT_SOURCE_FILE, BOOK_PRODUCT_GROUP);
+
+	// Render merch products to the page
+	renderProducts(PRODUCT_SOURCE_FILE, MERCH_PRODUCT_GROUP);
 });
 
 /**
- * Reads products from a JSON file and iteratively renders them to the page
+ * Reads a source file and renders either books or merch to the page
+ * @param {String} sourceFile
+ * @param {*} productGroup
  */
-function renderMerchProducts() {
-	fetch("./assets/product_list.json")
+function renderProducts(sourceFile, productGroup) {
+	fetch(sourceFile)
 		.then((response) => response.json())
 		.then((data) => {
-			const merchProducts = data.merchProducts;
+			// Fetch the corresponding products
+			const products =
+				productGroup.Name === "merch" ? data.merchProducts : data.bookProducts;
 
-			// Access the merch product grid element
-			let merchProductGrid = document.getElementById("merch-product-grid");
+			// Access the relevant product grid element
+			let productGrid = document.getElementById(productGroup.Grid);
 
-			// Add each product card to the merch product grid
-			merchProducts.forEach((product) => {
+			// Add each product card to the product grid
+			products.forEach((product) => {
 				// Card div
 				let div = document.createElement("div");
-				div.id = `product-${product.id}`;
+				div.id = `${productGroup.Name}-product-${product.id}`;
 				div.className = "product-card";
 
 				// Add product image
@@ -37,11 +44,13 @@ function renderMerchProducts() {
 				h3.innerText = product.title;
 				div.appendChild(h3);
 
-				// Add product size
-				let productSize = document.createElement("p");
-				productSize.className = "size";
-				productSize.textContent = `Size: ${product.size}`;
-				div.appendChild(productSize);
+				if (productGroup.Name === "merch") {
+					// Add product size
+					let productSize = document.createElement("p");
+					productSize.className = "size";
+					productSize.textContent = `Size: ${product.size}`;
+					div.appendChild(productSize);
+				}
 
 				// Add product price
 				let productPrice = document.createElement("p");
@@ -55,7 +64,10 @@ function renderMerchProducts() {
 				addToCartBtn.title = "Add to Cart";
 				addToCartBtn.innerHTML = "Add to Cart";
 				addToCartBtn.onclick = () => {
-					console.log("Added to cart", product.id);
+					// TODO: Implement add to cart functionality
+					console.log(
+						`${productGroup.Name} with id ${product.id} being added to cart`
+					);
 				};
 				div.appendChild(addToCartBtn);
 
@@ -65,14 +77,16 @@ function renderMerchProducts() {
 				viewDetailsBtn.title = "View Details";
 				viewDetailsBtn.innerHTML = "View Details";
 				viewDetailsBtn.onclick = () => {
-					console.log("Showing details for product id ", product.id);
+					console.log(
+						`Showing details for ${productGroup.Name} with id ${product.id}`
+					);
 				};
 				div.appendChild(viewDetailsBtn);
 
-				// Add product card to the merch product grid
-				merchProductGrid.appendChild(div);
+				// Add product card to the book product grid
+				productGrid.appendChild(div);
 
-				console.log("Merch products rendered successfully");
+				console.log(`${productGroup.Name} products rendered successfully`);
 			});
 		})
 		.catch((error) => {
