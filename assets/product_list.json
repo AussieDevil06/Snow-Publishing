@@ -1,36 +1,52 @@
 {
-    "merchProducts": [
-        {
-            "id": 1,
-            "imgSrc": "./assets/images/snow-publishing-official-hoodie_1712550381776.jpg",
-            "imgAlt": "Snow Publishing Hoodie",
-            "title": "Snow Publishing Hoodie",
-            "size": "S",
-            "price": 45
-        },
-        {
-            "id": 2,
-            "imgSrc": "./assets/images/snow-publishing-official-hoodie_1712550381776.jpg",
-            "imgAlt": "Snow Publishing Hoodie",
-            "title": "Snow Publishing Hoodie",
-            "size": "M",
-            "price": 50
-        },
-        {
-            "id": 3,
-            "imgSrc": "./assets/images/snow-publishing-official-hoodie_1712550381776.jpg",
-            "imgAlt": "Snow Publishing Hoodie",
-            "title": "Snow Publishing Hoodie",
-            "size": "L",
-            "price": 55
-        },
-        {
-            "id": 4,
-            "imgSrc": "./assets/images/snow-publishing-official-hoodie_1712550381776.jpg",
-            "imgAlt": "Snow Publishing Hoodie",
-            "title": "Snow Publishing Hoodie",
-            "size": "XL",
-            "price": 60
-        }
-    ]
+	"bookProducts": [
+		{
+			"id": 1,
+			"imgSrc": "./assets/images/book-placeholder.jpeg",
+			"imgAlt": "Book placeholder",
+			"title": "Book placeholder",
+			"price": 22.5
+		},
+		{
+			"id": 2,
+			"imgSrc": "./assets/images/book-placeholder.jpeg",
+			"imgAlt": "Book placeholder",
+			"title": "Book placeholder",
+			"price": 27.25
+		}
+	],
+	"merchProducts": [
+		{
+			"id": 1,
+			"imgSrc": "./assets/images/snow-publishing-official-hoodie_1712550381776.jpg",
+			"imgAlt": "Snow Publishing Hoodie",
+			"title": "Snow Publishing Hoodie",
+			"size": "S",
+			"price": 45
+		},
+		{
+			"id": 2,
+			"imgSrc": "./assets/images/snow-publishing-official-hoodie_1712550381776.jpg",
+			"imgAlt": "Snow Publishing Hoodie",
+			"title": "Snow Publishing Hoodie",
+			"size": "M",
+			"price": 50
+		},
+		{
+			"id": 3,
+			"imgSrc": "./assets/images/snow-publishing-official-hoodie_1712550381776.jpg",
+			"imgAlt": "Snow Publishing Hoodie",
+			"title": "Snow Publishing Hoodie",
+			"size": "L",
+			"price": 55
+		},
+		{
+			"id": 4,
+			"imgSrc": "./assets/images/snow-publishing-official-hoodie_1712550381776.jpg",
+			"imgAlt": "Snow Publishing Hoodie",
+			"title": "Snow Publishing Hoodie",
+			"size": "XL",
+			"price": 60
+		}
+	]
 }
