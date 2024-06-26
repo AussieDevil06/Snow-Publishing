@@ -21,7 +21,7 @@ function renderProducts(sourceFile, productGroup) {
 		.then((data) => {
 			// Fetch the corresponding products
 			const products =
-				productGroup.Name === "merch" ? data.merchProducts : data.bookProducts;
+				productGroup.Name === MERCH_PRODUCT_GROUP.Name ? data.merchProducts : data.bookProducts;
 
 			// Access the relevant product grid element
 			let productGrid = document.getElementById(productGroup.Grid);
@@ -44,7 +44,7 @@ function renderProducts(sourceFile, productGroup) {
 				h3.innerText = product.title;
 				div.appendChild(h3);
 
-				if (productGroup.Name === "merch") {
+				if (productGroup.Name === MERCH_PRODUCT_GROUP.Name) {
 					// Add product size
 					let productSize = document.createElement("p");
 					productSize.className = "size";
