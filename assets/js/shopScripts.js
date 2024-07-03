@@ -1,6 +1,6 @@
+const PRODUCT_SOURCE_FILE = "./assets/product_list.json";
 const MERCH_PRODUCT_GROUP = { Name: "merch", Grid: "merch-product-grid" };
 const BOOK_PRODUCT_GROUP = { Name: "book", Grid: "book-product-grid" };
-const PRODUCT_SOURCE_FILE = "./assets/product_list.json";
 
 document.addEventListener("DOMContentLoaded", () => {
 	// Render book products to the page
@@ -21,7 +21,9 @@ function renderProducts(sourceFile, productGroup) {
 		.then((data) => {
 			// Fetch the corresponding products
 			const products =
-				productGroup.Name === MERCH_PRODUCT_GROUP.Name ? data.merchProducts : data.bookProducts;
+				productGroup.Name === MERCH_PRODUCT_GROUP.Name
+					? data.merchProducts
+					: data.bookProducts;
 
 			// Access the relevant product grid element
 			let productGrid = document.getElementById(productGroup.Grid);
