@@ -1,94 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Snow Publishing</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
-</head>
-<body>
-    <header>
-        <!-- Navigation bar, logo, etc. -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <!-- Main content, contact form, contact information, etc. -->
-        <section class="contact-section">
-            <h2>Contact Us</h2>
-            <p>Have a question or feedback? Fill out the form below and we will get back to you as soon as possible.</p>
-            
-            <!-- Contact form -->
-            <form id="form">
-                <div class="field">
-                  <label for="from_name">from_name</label>
-                  <input type="text" name="from_name" id="from_name">
-                </div>
-                <div class="field">
-                  <label for="to_name">to_name</label>
-                  <input type="text" name="to_name" id="to_name">
-                </div>
-                <div class="field">
-                  <label for="message">message</label>
-                  <input type="text" name="message" id="message">
-                </div>
-                <div class="field">
-                  <label for="reply_to">reply_to</label>
-                  <input type="text" name="reply_to" id="reply_to">
-                </div>
-              
-                <input type="submit" id="button" value="Send Email" >
-              </form>
-              
-              <script type="text/javascript"
-                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-              
-              <script type="text/javascript">
-                emailjs.init('8P58dqA69zjughEhU')
-              </script>
-            
-            <!-- Contact information -->
-            <div class="contact-info">
-                <p>Email: admin@snow-publishing.com</p>
-                <p>Phone: +1 (123) 456-7890</p>
-                <!-- Add more contact information as needed -->
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <!-- Footer content, links, etc. -->
-        <p>&copy; 2024 Snow Publishing. All rights reserved.</p>
-    </footer>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact Us - Snow Publishing</title>
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+	</head>
+	<body>
+		<header>
+			<!-- Navigation bar, logo, etc. -->
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="shop.html">Shop</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 
-    <script src="./assets/js/script.js"></script>
+		<main>
+			<!-- Main content, contact form, contact information, etc. -->
+			<section class="contact-section">
+				<h2>Contact Us</h2>
+				<p>
+					Have a question or feedback? Fill out the form below and we will get
+					back to you as soon as possible.
+				</p>
 
-    <script>const btn = document.getElementById('button');
+				<!-- Contact form -->
+				<form id="form">
+					<div class="field">
+						<label for="name">name</label>
+						<input type="text" name="name" id="name" />
+					</div>
+					<div class="field">
+						<label for="email">email</label>
+						<input type="text" name="email" id="email" />
+					</div>
+					<div class="field">
+						<label for="message">message</label>
+						<input type="text" name="message" id="message" />
+					</div>
 
-        document.getElementById('form')
-         .addEventListener('submit', function(event) {
-           event.preventDefault();
-        
-           btn.value = 'Sending...';
-        
-           const serviceID = 'default_service';
-           const templateID = 'template_v70l7wy';
-        
-           emailjs.sendForm(serviceID, templateID, this)
-            .then(() => {
-              btn.value = 'Send Email';
-              alert('Sent!');
-            }, (err) => {
-              btn.value = 'Send Email';
-              alert(JSON.stringify(err));
-            });
-        });</script>
-</body>
+					<input type="submit" id="button" value="Send Email" />
+				</form>
+
+				<script
+					type="text/javascript"
+					src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+				></script>
+
+				<script type="text/javascript">
+					emailjs.init("8P58dqA69zjughEhU");
+				</script>
+
+				<!-- Contact information -->
+				<div class="contact-info">
+					<p>Email: admin@snow-publishing.com</p>
+					<p>Phone: +1 (123) 456-7890</p>
+					<!-- Add more contact information as needed -->
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<!-- Footer content, links, etc. -->
+			<p>&copy; 2024 Snow Publishing. All rights reserved.</p>
+		</footer>
+
+		<script src="./assets/js/script.js"></script>
+
+		<script>
+			const btn = document.getElementById("button");
+
+			document
+				.getElementById("form")
+				.addEventListener("submit", function (event) {
+					event.preventDefault();
+
+					btn.value = "Sending...";
+
+					const serviceID = "default_service";
+					const templateID = "template_v70l7wy";
+
+					emailjs.sendForm(serviceID, templateID, this).then(
+						() => {
+							btn.value = "Send Email";
+							alert("Sent!");
+						},
+						(err) => {
+							btn.value = "Send Email";
+							alert(JSON.stringify(err));
+						}
+					);
+				});
+		</script>
+	</body>
 </html>
