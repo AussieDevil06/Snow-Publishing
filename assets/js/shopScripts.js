@@ -31,34 +31,34 @@ function renderProducts(sourceFile, productGroup) {
 			// Add each product card to the product grid
 			products.forEach((product) => {
 				// Card div
-				let div = document.createElement("div");
-				div.id = `${productGroup.Name}-product-${product.id}`;
-				div.className = "product-card";
+				let productCard = document.createElement("div");
+				productCard.id = `${productGroup.Name}-product-${product.id}`;
+				productCard.className = "product-card";
 
 				// Add product image
-				let img = document.createElement("img");
-				img.src = product.imgSrc;
-				img.alt = product.imgAlt;
-				div.appendChild(img);
+				let productFeatureImage = document.createElement("img");
+				productFeatureImage.src = product.imgSrc;
+				productFeatureImage.alt = product.imgAlt;
+				productCard.appendChild(productFeatureImage);
 
 				// Add product title
-				let h3 = document.createElement("h3");
-				h3.innerText = product.title;
-				div.appendChild(h3);
+				let productTitle = document.createElement("h3");
+				productTitle.innerText = product.title;
+				productCard.appendChild(productTitle);
 
 				if (productGroup.Name === MERCH_PRODUCT_GROUP.Name) {
 					// Add product size
 					let productSize = document.createElement("p");
 					productSize.className = "size";
 					productSize.textContent = `Size: ${product.size}`;
-					div.appendChild(productSize);
+					productCard.appendChild(productSize);
 				}
 
 				// Add product price
 				let productPrice = document.createElement("p");
 				productPrice.className = "price";
 				productPrice.textContent = `\$${Number(product.price).toFixed(2)}`;
-				div.appendChild(productPrice);
+				productCard.appendChild(productPrice);
 
 				// Add to cart button
 				let addToCartBtn = document.createElement("button");
@@ -71,7 +71,7 @@ function renderProducts(sourceFile, productGroup) {
 						`${productGroup.Name} with id ${product.id} being added to cart`
 					);
 				};
-				div.appendChild(addToCartBtn);
+				productCard.appendChild(addToCartBtn);
 
 				// Add view details button
 				let viewDetailsBtn = document.createElement("button");
@@ -83,10 +83,10 @@ function renderProducts(sourceFile, productGroup) {
 						`Showing details for ${productGroup.Name} with id ${product.id}`
 					);
 				};
-				div.appendChild(viewDetailsBtn);
+				productCard.appendChild(viewDetailsBtn);
 
 				// Add product card to the book product grid
-				productGrid.appendChild(div);
+				productGrid.appendChild(productCard);
 
 				console.log(`${productGroup.Name} products rendered successfully`);
 			});
