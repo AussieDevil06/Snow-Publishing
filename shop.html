@@ -1,102 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop - Snow Publishing</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
-</head>
-<body>
-    <header>
-        <!-- Navigation bar, logo, etc. -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li style="float:right;"><a href="#" id="cartBtn">Cart</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <!-- Main content, product listings, filters, etc. -->
-        <section class="products">
-    <h2>Shop</h2>
-    
-    <!-- Books -->
-    <h3 style="padding: 20px;">Books</h3>
-    <div class="product-grid-scroll">
-        <!-- Product grid -->
-        <div class="product-grid">
-            <!-- Sample product cards -->
-            <div class="product-card">
-                <img src="./assets/images/book-placeholder.jpeg" alt="Book 1">
-                <h3>Book Title</h3>
-                <p class="price">$XX.XX</p>
-                <a href="#" class="btn">Add to Cart</a>
-            </div>
-          <div class="product-card">
-                <img src="./assets/images/book-placeholder.jpeg" alt="Book 2">
-                <h3>Book Title</h3>
-                <p class="price">$XX.XX</p>
-                <a href="#" class="btn">Add to Cart</a>
-            </div>
-          <div class="product-card">
-                <img src="./assets/images/book-placeholder.jpeg" alt="Book 3">
-                <h3>Book Title</h3>
-                <p class="price">$XX.XX</p>
-                <a href="#" class="btn">Add to Cart</a>
-            </div>
-            <!-- Add more product cards as needed -->
-        </div>
-    </div>
-    
-    <!-- Merch -->
-    <h3 style="padding: 20px;">Merch</h3>
-    <div class="product-grid-scroll">
-        <!-- Product grid -->
-        <div class="product-grid">
-            <!-- Sample product cards -->
-            <div class="product-card">
-                <img src="./assets/images/snow-publishing-official-hoodie_1712550381776.jpg" alt="Snow Publishing Hoodie">
-                <h3>Snow Publishing Hoodie</h3>
-                <p class="price">$50.00</p>
-                <a href="#" class="btn">Add to Cart</a>
-              <a href="#" class="view-details-button">View Details</a>
-            </div>
-            <!-- Add more product cards as needed -->
-        </div>
-    </div>
-</section>
-    </main>
-    
-    <footer>
-        <!-- Footer content, links, etc. -->
-        <p>&copy; 2024 Snow Publishing. All rights reserved.</p>
-    </footer>
-  
-  <!-- Cart Modal -->
-    <div id="cartModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Your cart is empty. Please add some items to the cart.</p>
-        </div>
-    </div>
-  
-  <!-- Product Details Modal -->
-    <div id="productModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="productTitle">Product Title</h2>
-            <img id="productImage" src="" alt="Product Image">
-            <p id="productDescription">Product Description</p>
-            <p class="price" id="productPrice">$XX.XX</p>
-            <button class="btn" id="addToCartButton">Add to Cart</button>
-        </div>
-    </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Shop - Snow Publishing</title>
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+	</head>
+	<body>
+		<header>
+			<!-- Navigation bar, logo, etc. -->
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="shop.html">Shop</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li style="float: right"><a href="#" id="cartBtn">Cart</a></li>
+				</ul>
+			</nav>
+		</header>
 
-    <script src="./assets/js/script.js"></script>
-</body>
+		<main>
+			<!-- Main content, product listings, filters, etc. -->
+			<section class="products">
+				<h2>Shop</h2>
+
+				<!-- Books -->
+				<h3 style="padding: 20px">Books</h3>
+				<div class="product-grid-scroll">
+					<!-- Product grid -->
+					<div id="book-product-grid" class="product-grid">
+						<!-- Book product cards will be dynamically generated here -->
+					</div>
+				</div>
+
+				<!-- Merch -->
+				<h3 style="padding: 20px">Merch</h3>
+				<div class="product-grid-scroll">
+					<!-- Product grid -->
+					<div id="merch-product-grid" class="product-grid">
+						<!-- Merch product cards will be dynamically generated here -->
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<!-- Footer content, links, etc. -->
+			<p>
+				&copy;
+				<script>
+					// Automate year - This will update each year automatically
+					document.writeln(new Date().getFullYear());
+				</script>
+				Snow Publishing. All rights reserved.
+			</p>
+		</footer>
+
+		<!-- Cart Modal -->
+		<div id="cartModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<p>Your cart is empty. Please add some items to the cart.</p>
+			</div>
+		</div>
+
+		<!-- Product details modal -->
+		<div id="productModal" class="modal" style="display: block;">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h2 id="productTitle">Book placeholder</h2>
+
+				<!-- TODO Replace this with a slideshow gallery -->
+				<img src="./assets/images/book-placeholder.jpeg" alt="Book placeholder" />
+				<p class="price" id="productPrice">$22.50</p>
+				<p id="productColours">Colours will go here</p>
+				<p id="productSizes">Sizes will go here</p>
+				<p class="description" id="productDescription">Add a detailed description about the book here</p>
+				<button class="btn add-to-cart-button" title="Add to Cart">
+					Add to Cart
+				</button>
+			</div>
+		</div>
+
+		<script src="./assets/js/shopScripts.js"></script>
+	</body>
 </html>

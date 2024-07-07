@@ -60,11 +60,10 @@ footer {
 /* Buttons */
 .btn {
     display: inline-block;
-    background-color: #333;
-    color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -74,6 +73,15 @@ footer {
 .view-details-button {
     display: inline-block;
     background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.add-to-cart-button {
+    display: inline-block;
+    background-color: #0a9538;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -127,6 +135,10 @@ footer {
     background-color: #555;
 }
 
+.products {
+    text-align: center;
+}
+
 /* Product grid scroll container */
 .product-grid-scroll {
     overflow-x: auto; /* Enable horizontal scrolling */
@@ -136,19 +148,37 @@ footer {
 
 /* Product grid styles */
 .product-grid {
-    display: inline-block; /* Display products in a row */
+    width: 100%;
+    display: inline-flex; /* Display products in a row */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 
 /* Product card styles */
 .product-card {
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px lightgray;
     display: inline-block;
-    width: 200px;
-    margin-right: 20px;
-    vertical-align: top;
+    text-align: center;
+    margin: 20px;
+    max-width: 300px;
+    padding: 15px;
+}
+
+.product-card button {
+    margin: 5px;
 }
 
 .product-card img {
   height: 120px;
+}
+
+.product-card .description {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 nav ul li.float-right {

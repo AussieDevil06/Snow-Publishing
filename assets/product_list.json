@@ -1,0 +1,48 @@
+{
+	"bookProducts": [
+		{
+			"id": 1,
+			"title": "Book placeholder",
+			"price": 22.5,
+			"description": "Add a detailed description about the book here",
+			"images": [
+				{
+					"imgSrc": "./assets/images/book-placeholder.jpeg",
+					"imgAlt": "Book placeholder"
+				},
+				{
+					"imgSrc": "./assets/images/book-placeholder.jpeg",
+					"imgAlt": "Book placeholder"
+				},
+				{
+					"imgSrc": "./assets/images/book-placeholder.jpeg",
+					"imgAlt": "Book placeholder"
+				}
+			]
+		}
+	],
+	"merchProducts": [
+		{
+			"id": 1,
+			"title": "Snow Publishing Hoodie",
+			"price": 45,
+			"description": "Warm and trendy hoodie with the classic 'Snow Publishing' logo",
+			"images": [
+				{
+					"imgSrc": "./assets/images/snow-publishing-official-hoodie_1712550381776.jpg",
+					"imgAlt": "Snow Publishing Hoodie"
+				},
+				{
+					"imgSrc": "./assets/images/snow-publishing-official-hoodie_1712550381776.jpg",
+					"imgAlt": "Snow Publishing Hoodie"
+				},
+				{
+					"imgSrc": "./assets/images/snow-publishing-official-hoodie_1712550381776.jpg",
+					"imgAlt": "Snow Publishing Hoodie"
+				}
+			],
+			"sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+			"colours": ["White", "Black", "Pink", "Blue"]
+		}
+	]
+}
