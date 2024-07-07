@@ -60,11 +60,10 @@ footer {
 /* Buttons */
 .btn {
     display: inline-block;
-    background-color: #333;
-    color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -74,6 +73,15 @@ footer {
 .view-details-button {
     display: inline-block;
     background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.add-to-cart-button {
+    display: inline-block;
+    background-color: #0a9538;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -155,8 +163,8 @@ footer {
     display: inline-block;
     text-align: center;
     margin: 20px;
-    width: max-content;
-    padding: 5px;
+    max-width: 300px;
+    padding: 15px;
 }
 
 .product-card button {
@@ -165,6 +173,12 @@ footer {
 
 .product-card img {
   height: 120px;
+}
+
+.product-card .description {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 nav ul li.float-right {
