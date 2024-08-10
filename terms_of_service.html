@@ -86,7 +86,47 @@
     
     <footer>
         <!-- Footer content, links, etc. -->
-        <p>&copy; 2024 Snow Publishing. All rights reserved.</p>
+        <p>
+            &copy;
+            <script>
+                // Automate year - This will update each year automatically
+                document.writeln(new Date().getFullYear());
+            </script>
+            Snow Publishing. All rights reserved.
+        </p>
+        <br>
+        <ul class="multi-column-list">
+            <li>
+                <a href="privacy_policy.html" class="btn">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="terms_of_service.html" class="btn">Terms of Service</a>
+            </li>
+            <li>
+                <a href="shop.html" class="btn">Shop Now</a>
+            </li>
+        </ul>
+        <br>
+        <ul class="contact-list">
+            <li>
+                <a href="mailto:admin@snow-publishing.com" class="btn">Email: admin@snow-publishing.com</a>
+            </li>
+            <li>
+                Phone: +1 (123) 456-7890
+            </li>
+        </ul>
+        <br>
+        <ul class="social-list">
+            <li>
+                <a href="https://www.instagram.com/snow.publishing/" class="btn"><img src="./assets/images/instagram-logo-removebg-preview.png" alt="Our Instagram" style="width:40px;"></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/profile.php?id=61558068695558&mibextid=ZbWKwL&paipv=0&eav=AfZf3iOM_UryP7e9kkmVsxBQEb4a24BVWkVUyzQo48Z_X8eMajE_YMgZe8SaHpg9Qoc&_rdr" class="btn"><img src="./assets/images/facebook-logo-removebg-preview.png" alt="Our Facebook Page" style="width: 40px;"></a>
+            </li>
+            <li>
+                <a href="https://x.com/snow_publishing" class="btn"><img src="./assets/images/x-logo.png" alt="Our X (formerly Twitter)" style="width: 40px;"></a>
+            </li>
+        </ul>
     </footer>
 
     <script src="./assets/js/script.js"></script>

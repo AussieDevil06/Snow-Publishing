@@ -64,6 +64,18 @@ footer {
     list-style-type: none;
 }
 
+.contact-list {
+    columns: 2;
+    column-gap: normal;
+    list-style-type: none;
+}
+
+.social-list {
+    columns: 3;
+    column-gap: normal;
+    list-style-type: none;
+}
+
 footer ul li a {
     text-decoration: none;
     color: #fff;
